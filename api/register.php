@@ -30,7 +30,7 @@ if ($username === '' || $email === '' || $password === '') {
 http_response_code(201);
 echo json_encode([
     'status'  => true,
-    'message' => 'Registrasi pengguna berhasil',
+    'message' => 'Registrasi pengguna berhasil diproses ',
     'data'    => [
         'username' => $username,
         'email'    => $email,
