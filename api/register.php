@@ -26,6 +26,11 @@ if ($username === '' || $email === '' || $password === '') {
     echo json_encode(['status' => false, 'message' => 'Username, email, dan password wajib diisi']);
     exit;
 }
+if (strlen($password) < 8) {
+    http_response_code(400);
+    echo json_encode(['status' => false, 'message' => 'Password minimal 8 karakter']);
+    exit;
+}
 
 http_response_code(201);
 echo json_encode([
